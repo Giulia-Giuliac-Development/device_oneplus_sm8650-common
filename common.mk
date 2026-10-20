@@ -135,6 +135,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
+$(call soong_config_set,BIONIC,use_jemalloc_for_display_stack,false)
+
 # Dolby
 $(call inherit-product, vendor/sony/dolby/sonydolby.mk)
 
